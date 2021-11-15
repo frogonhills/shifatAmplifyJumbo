@@ -101,35 +101,3 @@ export const listValidations = /* GraphQL */ `
     }
   }
 `;
-export const dataByStage = /* GraphQL */ `
-  query DataByStage(
-    $id: ID
-    $sortDirection: ModelSortDirection
-    $filter: ModelCoreDataFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    dataByStage(
-      id: $id
-      sortDirection: $sortDirection
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-    ) {
-      items {
-        id
-        name
-        address
-        email
-        type
-        Stage
-        validation {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-  }
-`;

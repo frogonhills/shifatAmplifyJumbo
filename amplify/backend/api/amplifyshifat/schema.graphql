@@ -1,7 +1,7 @@
 
 
 
-type CoreData @model @key(name: "byStage" , fields:["id"] , queryField:"dataByStage"){
+type CoreData @model {
   id: ID!
   name: String
   address: String
